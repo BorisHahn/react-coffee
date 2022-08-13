@@ -1,9 +1,8 @@
 import { Component } from 'react';
 
-import NavPanel from '../components/nav-panel/nav-panel';
-
 import './app.css';
 import '../fonts/fonts.css';
+import OurCoffee from './pages/our-coffee/our-coffee-page';
 
 class App extends Component {
   constructor(props) {
@@ -46,10 +45,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <div className='header'>
-          <NavPanel/>
-          <h1 className='page-title'>Our coffee</h1>
-        </div>
+        <OurCoffee/>
       </div>
     );
   }

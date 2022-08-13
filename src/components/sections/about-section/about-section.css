@@ -1,0 +1,52 @@
+.about {
+  margin: 0;
+  margin-top: 70px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 79px;
+  
+}
+
+.about__image {
+  width: 272px;
+  height: 355px;
+  background-image: url(../../../img/girl.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about__text {
+  margin: 0;
+  padding: 0;
+  max-width: 346px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.about__text-title {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-family: 'Merienda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+}
+
+.about__text-article {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  text-align: center;
+  font-family: 'Merienda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
