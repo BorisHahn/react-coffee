@@ -1,0 +1,19 @@
+.line {
+  padding: 0;
+  margin: 57px auto 60px;
+  height: 5px;
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-and-filter {
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 61px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 83px;
+}

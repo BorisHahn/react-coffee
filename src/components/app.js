@@ -43,9 +43,10 @@ class App extends Component {
     }
   }
   render() {
+    const {data} = this.state;
     return (
       <div className="app">
-        <OurCoffee/>
+        <OurCoffee data={data}/>
       </div>
     );
   }

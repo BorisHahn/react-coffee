@@ -1,0 +1,43 @@
+.filter {
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 19px;
+}
+.filter__text {
+  padding: 0;
+  margin: 0;
+  font-family: 'Merienda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.filter__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.filter__button {
+  padding: 0;
+  margin: 0;
+  width: 75px;
+  height: 30px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  border: none;
+  font-family: 'Merienda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  color: #000000;
+  text-align: center;
+  cursor: pointer;
+}
