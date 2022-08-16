@@ -1,16 +1,21 @@
-import { Component } from "react";
+
 import './filter-panel-section.css';
 
-const FilterPanel = () => {
+const FilterPanel = (props) => {
   const buttonsData = [
     {name: "All", label: "All"},
     {name: "Brasil", label: "Brasil"},
     {name: "Kenya", label: "Kenya"},
     {name: "Columbia", label: "Columbia"},
   ]
+  const {filter} = props;
   const buttons = buttonsData.map(({name, label}) => {
+    const active = filter === name;
+    const clazz = active ? "filter__button_active" : "filter__button";
     return (
-      <button className="filter__button" type="button" key={name}>{label}</button>
+      <button className={`filter__button ${clazz}`}
+              type="button" key={name}
+              onClick={() => props.onFilterSelect(name)}>{label}</button>
     )
   })
   return (
