@@ -9,7 +9,10 @@ const CoffeeList = ({data}) => {
           <CoffeeItem key={id} {...itemProps}/>
       )
   })
-  const emptyMessage = <div>Нет данных</div>
+  const emptyMessage = 
+    <div className="empty-plag">
+      <p className="empty-plag__text">Nothing found for your request...</p>
+    </div>
   const isEmpty = elements.length === 0;
   return (
     <ul className="list">

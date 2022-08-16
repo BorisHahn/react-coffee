@@ -17,7 +17,7 @@ class App extends Component {
               weight: 1,
               img: coffeeImg,
               id: 1,
-                },
+            },
             {
               name: 'UCC',
               country: 'Brasil',
@@ -70,6 +70,19 @@ class App extends Component {
     })
   }
 
+  filterEmp = (items, filter) => {
+    switch(filter) {
+      case 'Brasil':
+        return items.filter(item => item.country === filter);
+      case 'Kenya':
+        return items.filter(item => item.country === filter);
+      case 'Columbia':
+        return items.filter(item => item.country === filter);
+      default:
+        return items;
+    }
+  }
+  
   searchEmp = (items, term) => {
     if (term.length === 0) {
       return items;
@@ -86,7 +99,7 @@ class App extends Component {
 
   render() {
     const {data, filter, term} = this.state;
-    const visibleData = this.searchEmp(data, term);
+    const visibleData = this.filterEmp(this.searchEmp(data, term), filter);
     let page = (<OurCoffee data={visibleData}
                           filter={filter}
                           onFilterSelect={this.onFilterSelect}
