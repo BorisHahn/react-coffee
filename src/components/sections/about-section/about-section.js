@@ -1,20 +1,18 @@
 import './about-section.css';
 import aboutLogo from '../../../img/about-logo.svg';
 
-const AboutSection = () => {
+
+
+const AboutSection = ({info}) => {
   return (
     <div className="about">
-      <div className="about__image"></div>
+      <img className="about__image" src={info.img} alt="girl"></img>
       <div className="about__text">
-        <h2 className="about__text-title">About our beans</h2>
-        <img className="about__text-logo" src={aboutLogo}></img>
+        <h2 className="about__text-title">{info.title}</h2>
+        <img className="about__text-logo" src={aboutLogo} alt="logo"></img>
         <article className='about__text-article'>
-          <p>Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.</p>
-          <p>Afraid at highly months do things on at. Situation recommend objection do intention so questions. 
-             As greatly removed calling pleased improve an. Last ask him cold feel
-             met spot shy want. Children me laughing we prospect answered followed. At it went
-             is song that held help face.
-          </p>
+          <p>{info.firstText}</p>
+          <p>{info.secondText}</p>
         </article>
       </div>
     </div>

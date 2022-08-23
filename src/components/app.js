@@ -1,9 +1,17 @@
 import { Component } from 'react';
 import coffeeImg from '../img/coffee-card.png';
 
+import cupImg from '../img/cup.png';
+import girlImg from '../img/girl.png';
+
 import './app.css';
 import '../fonts/fonts.css';
-import OurCoffee from './pages/our-coffee/our-coffee-page';
+import Shop from './pages/Shop';
+import Home from './pages/Home-page';
+import Pleasure from './pages/Pleasure-page';
+import { Routes, Route } from 'react-router-dom'
+import Layout from './Layout';
+
 
 class App extends Component {
   constructor(props) {
@@ -59,11 +67,11 @@ class App extends Component {
               id: 6,
             },
         ],
-        page: 'main',
         filter: 'All',
         term: '',
     }
   }
+
   onFilterSelect = (filter) => {
     this.setState({
       filter: filter
@@ -100,13 +108,34 @@ class App extends Component {
   render() {
     const {data, filter, term} = this.state;
     const visibleData = this.filterEmp(this.searchEmp(data, term), filter);
-    let page = (<OurCoffee data={visibleData}
-                          filter={filter}
-                          onFilterSelect={this.onFilterSelect}
-                          onUpdateSearch={this.onUpdateSearch}/>);
+
+    const aboutBeans = { 
+      title: 'About our beans',
+      img: girlImg,
+      firstText: 'Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.',
+      secondText: 'Afraid at highly months do things on at. Situation recommend objection do intention so questions. As greatly removed calling pleased improve an. Last ask him cold feelmet spot shy want. Children me laughing we prospect answered followed. At it wentis song that held help face.'
+    };
+  
+    const aboutGoods = { 
+          title: 'About our goods',
+          img: cupImg,
+          firstText: 'Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.',
+          secondText: 'Afraid at highly months do things on at. Situation recommend objection do intention so questions. As greatly removed calling pleased improve an. Last ask him cold feelmet spot shy want. Children me laughing we prospect answered followed. At it wentis song that held help face.'
+        };
+    
     return (
       <div className="app">
-        {page}
+        <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="shop" element={<Shop data={visibleData}
+                                                    filter={filter}
+                                                    onFilterSelect={this.onFilterSelect}
+                                                    onUpdateSearch={this.onUpdateSearch}
+                                                    info={aboutBeans}/>} />
+            <Route path="pleasure" element={<Pleasure data={visibleData} info={aboutGoods}/>} />
+          </Route>
+        </Routes>
       </div>
     );
   }
