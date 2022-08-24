@@ -1,12 +1,13 @@
 import CoffeeItem from "../coffee-item-section/coffee-item-section"
 import './coffee-list-section.css';
+import { NavLink } from 'react-router-dom'
 
 const CoffeeList = ({data}) => {
   const elements = data.map(item => {
     const {id, ...itemProps} = item;
     
       return (
-          <CoffeeItem key={id} {...itemProps}/>
+        <NavLink className="coffee-link" key={id} to={`/shop/${id}`}><CoffeeItem {...itemProps}/></NavLink>
       )
   })
   const emptyMessage = 

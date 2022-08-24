@@ -9,6 +9,7 @@ import '../fonts/fonts.css';
 import Shop from './pages/Shop';
 import Home from './pages/Home-page';
 import Pleasure from './pages/Pleasure-page';
+import About from './pages/About-page';
 import { Routes, Route } from 'react-router-dom'
 import Layout from './Layout';
 
@@ -117,22 +118,19 @@ class App extends Component {
     };
   
     const aboutGoods = { 
-          title: 'About our goods',
-          img: cupImg,
-          firstText: 'Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.',
-          secondText: 'Afraid at highly months do things on at. Situation recommend objection do intention so questions. As greatly removed calling pleased improve an. Last ask him cold feelmet spot shy want. Children me laughing we prospect answered followed. At it wentis song that held help face.'
-        };
+      title: 'About our goods',
+      img: cupImg,
+      firstText: 'Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.',
+      secondText: 'Afraid at highly months do things on at. Situation recommend objection do intention so questions. As greatly removed calling pleased improve an. Last ask him cold feelmet spot shy want. Children me laughing we prospect answered followed. At it wentis song that held help face.'
+    };
     
     return (
       <div className="app">
         <Routes>
           <Route path='/' element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="shop" element={<Shop data={visibleData}
-                                                    filter={filter}
-                                                    onFilterSelect={this.onFilterSelect}
-                                                    onUpdateSearch={this.onUpdateSearch}
-                                                    info={aboutBeans}/>} />
+            <Route path="shop" element={<Shop data={visibleData} filter={filter} onFilterSelect={this.onFilterSelect} onUpdateSearch={this.onUpdateSearch} info={aboutBeans}/>} />
+            <Route path="shop/:id" element={<About data={visibleData}/>} />
             <Route path="pleasure" element={<Pleasure data={visibleData} info={aboutGoods}/>} />
           </Route>
         </Routes>
