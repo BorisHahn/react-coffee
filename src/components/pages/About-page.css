@@ -1,0 +1,63 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  margin: 70px auto 30px auto;
+  padding: 0;
+}
+.info__blocks {
+  display: flex;
+  gap: 42px;
+}
+.info__block-img {
+ width: 392px;
+ height: 355px;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+}
+
+.info__block-text {
+  width: 392px;
+  height: 355px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.info__block-text__title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: 'Merienda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  align-self: center;
+}
+
+.info__block-text__logo {
+  align-self: center;
+}
+.info__button {
+  width: 100px;
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+.info__block-text__country,
+.info__block-text__price,
+.info__block-text__description,
+.info__block-text__weight {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-family: 'Merienda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+

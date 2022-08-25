@@ -11,9 +11,9 @@ const FilterPanel = (props) => {
   const {filter} = props;
   const buttons = buttonsData.map(({name, label}) => {
     const active = filter === name;
-    const clazz = active ? "filter__button_active" : "filter__button";
+    const clazz = active && "button_active";
     return (
-      <button className={`filter__button ${clazz}`}
+      <button className={`button ${clazz}`}
               type="button" key={name}
               onClick={() => props.onFilterSelect(name)}>{label}</button>
     )

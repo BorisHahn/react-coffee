@@ -1,0 +1,70 @@
+.main-about {
+  margin: 0;
+  margin-top: 80px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main-about__title {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Merienda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+}
+
+.main-about__textblock {
+  margin: 0;
+  margin-bottom: 100px;
+  padding: 0;
+  max-width: 589px;
+  text-align: center;
+  font-family: 'Merienda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.main-about__logo {
+  margin-bottom: 40px;
+}
+
+.main-best {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 0;
+  background-image: url('../../img/main-best.png');
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.main-best__title {
+  margin: 0;
+  margin-top: 80px;
+  margin-bottom: 39px;
+  padding: 0;
+  font-family: 'Merienda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+}
+
+.main-best__list {
+  margin: 0;
+  margin-bottom: 100px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 71px;
+}

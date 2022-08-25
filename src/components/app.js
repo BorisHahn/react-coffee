@@ -1,8 +1,11 @@
 import { Component } from 'react';
 import coffeeImg from '../img/coffee-card.png';
-
+import solimoImage from '../img/solimo.png';
+import prestoImage from '../img/presto.png';
+import aromisticoImage from '../img/aromistico.png';
 import cupImg from '../img/cup.png';
 import girlImg from '../img/girl.png';
+
 
 import './app.css';
 import '../fonts/fonts.css';
@@ -26,6 +29,7 @@ class App extends Component {
               weight: 1,
               img: coffeeImg,
               id: 1,
+              description: 'Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
             },
             {
               name: 'UCC',
@@ -34,6 +38,7 @@ class App extends Component {
               weight: 1,
               img: coffeeImg,
               id: 2,
+              description: 'Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
             },
             {
               name: 'Jardin',
@@ -42,6 +47,7 @@ class App extends Component {
               weight: 1,
               img: coffeeImg,
               id: 3,
+              description: 'Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
             },
             {
               name: 'Hausbrandt',
@@ -50,6 +56,7 @@ class App extends Component {
               weight: 1,
               img: coffeeImg,
               id: 4,
+              description: 'Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
             },
             {
               name: 'Lucaffe',
@@ -58,6 +65,7 @@ class App extends Component {
               weight: 2,
               img: coffeeImg,
               id: 5,
+              description: 'Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
             },
             {
               name: 'Aromistico',
@@ -66,8 +74,36 @@ class App extends Component {
               weight: 2,
               img: coffeeImg,
               id: 6,
+              description: 'Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
             },
         ],
+        dataBest: [
+          {
+            name: 'Solimo',
+            country: 'Kenya',
+            price: 10.73,
+            weight: 2,
+            img: solimoImage,
+            id: 7,
+          },
+          {
+            name: 'Presto',
+            country: 'Brasil',
+            price: 4.99,
+            weight: 1,
+            img: prestoImage,
+            id: 8,
+          },
+          {
+            name: 'Aromistico',
+            country: 'Kenya',
+            price: 7.99,
+            weight: 1,
+            img: aromisticoImage,
+            id: 9,
+          },
+          
+      ],
         filter: 'All',
         term: '',
     }
@@ -107,7 +143,7 @@ class App extends Component {
   }
 
   render() {
-    const {data, filter, term} = this.state;
+    const {data, filter, term, dataBest} = this.state;
     const visibleData = this.filterEmp(this.searchEmp(data, term), filter);
 
     const aboutBeans = { 
@@ -128,10 +164,10 @@ class App extends Component {
       <div className="app">
         <Routes>
           <Route path='/' element={<Layout />}>
-            <Route index element={<Home />} />
+            <Route index element={<Home dataBest={dataBest}/>} />
             <Route path="shop" element={<Shop data={visibleData} filter={filter} onFilterSelect={this.onFilterSelect} onUpdateSearch={this.onUpdateSearch} info={aboutBeans}/>} />
             <Route path="shop/:id" element={<About data={visibleData}/>} />
-            <Route path="pleasure" element={<Pleasure data={visibleData} info={aboutGoods}/>} />
+            <Route path="pleasure" element={<Pleasure data={data} info={aboutGoods}/>} />
           </Route>
         </Routes>
       </div>
