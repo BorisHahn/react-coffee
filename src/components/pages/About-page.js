@@ -7,7 +7,7 @@ const About = ({data}) => {
   const card = data.find(item => item.id === parseInt(id));
   return (
     <div className="info">
-      <NavLink to="/shop"><button type="button" className="button info__button">Return to shop</button></NavLink>
+      <NavLink to={process.env.PUBLIC_URL + '/shop'}><button type="button" className="button info__button">Return to shop</button></NavLink>
       <div className="info__blocks">
         <div className="info__block-img" style={{backgroundImage: `url("${card.img}")`}}></div>
         <div className="info__block-text">

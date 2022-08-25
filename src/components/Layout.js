@@ -11,21 +11,18 @@ const Layout = () => {
   
   const location = useLocation();
   let className = `header `;
-  matchPath('/shop/:id', location.pathname);
-
   let titleText = '';
   
-
-  if (matchPath('/shop/:id', location.pathname) ||
-      matchPath('/shop', location.pathname)) {
+  if (matchPath(process.env.PUBLIC_URL + '/shop/:id', location.pathname) ||
+      matchPath(process.env.PUBLIC_URL + '/shop', location.pathname)) {
     className += 'header__background_shop';
     titleText += 'Our coffee';
   }
-  else if (matchPath('/pleasure', location.pathname)) {
+  else if (matchPath(process.env.PUBLIC_URL + '/pleasure', location.pathname)) {
     className += 'header__background_pleasure';
     titleText += 'For your pleasure';
   }
-  else if (matchPath('/', location.pathname)) {
+  else if (matchPath(process.env.PUBLIC_URL + '/', location.pathname)) {
     className += 'header__background_main';
     titleText += 'Everything You Love About Coffee';
   }
@@ -47,12 +44,12 @@ const Layout = () => {
       <div className={className}>
         <div className='nav-list'>
           <img src={logo} alt='logo-img'/>
-          <NavLink className='nav-item' to='/'>Coffee house</NavLink>
-          <NavLink className='nav-item' to="/shop">Our coffee</NavLink>
-          <NavLink className='nav-item' to='/pleasure'>For your pleasure</NavLink>
+          <NavLink className='nav-item' to={process.env.PUBLIC_URL + '/'}>Coffee house</NavLink>
+          <NavLink className='nav-item' to='shop'>Our coffee</NavLink>
+          <NavLink className='nav-item' to='pleasure'>For your pleasure</NavLink>
         </div>
         <h1 className='header__title'>{titleText}</h1>
-        {matchPath('/', location.pathname) && headerMainText}
+        {matchPath(process.env.PUBLIC_URL + '/', location.pathname) && headerMainText}
       </div>
       
       <Outlet className='main'/>
@@ -61,8 +58,8 @@ const Layout = () => {
         <div className='footer__nav-list'>
           <img src={logoBlack} alt='logo-img'/>
           <NavLink className='footer__nav-item' to='/'>Coffee house</NavLink>
-          <NavLink className='footer__nav-item' to='/shop'>Our coffee</NavLink>
-          <NavLink className='footer__nav-item' to='/pleasure'>For your pleasure</NavLink>
+          <NavLink className='footer__nav-item' to='shop'>Our coffee</NavLink>
+          <NavLink className='footer__nav-item' to='pleasure'>For your pleasure</NavLink>
         </div>
         <img className='footer__logo' src={logoBlackLines} alt='footer logo'></img>
       </div>

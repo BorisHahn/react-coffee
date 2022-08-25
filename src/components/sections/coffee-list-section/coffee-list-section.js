@@ -7,7 +7,7 @@ const CoffeeList = ({data}) => {
     const {id, ...itemProps} = item;
     
       return (
-        <NavLink className="coffee-link" key={id} to={`/shop/${id}`}><CoffeeItem {...itemProps}/></NavLink>
+        <NavLink className="coffee-link" key={id} to={process.env.PUBLIC_URL + `/shop/${id}`}><CoffeeItem {...itemProps}/></NavLink>
       )
   })
   const emptyMessage = 

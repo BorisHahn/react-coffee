@@ -163,7 +163,7 @@ class App extends Component {
     return (
       <div className="app">
         <Routes>
-          <Route path='/' element={<Layout />}>
+          <Route path={process.env.PUBLIC_URL + '/'} element={<Layout />}>
             <Route index element={<Home dataBest={dataBest}/>} />
             <Route path="shop" element={<Shop data={visibleData} filter={filter} onFilterSelect={this.onFilterSelect} onUpdateSearch={this.onUpdateSearch} info={aboutBeans}/>} />
             <Route path="shop/:id" element={<About data={visibleData}/>} />
