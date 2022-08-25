@@ -1,1 +1,1 @@
-### coffee-react
+### react-coffee
