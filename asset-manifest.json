@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/coffee-app/static/css/main.5fda590e.css",
+    "main.js": "/coffee-app/static/js/main.edf764bf.js",
+    "static/media/main-best.png": "/coffee-app/static/media/main-best.ffa5de3c1b3a696454c9.png",
+    "static/media/main.png": "/coffee-app/static/media/main.8af0b06fc48cc181b474.png",
+    "static/media/header.png": "/coffee-app/static/media/header.ebb414eb116c561181ad.png",
+    "static/media/header1.png": "/coffee-app/static/media/header1.77078c9e0edc247e033d.png",
+    "static/media/coffee-card.png": "/coffee-app/static/media/coffee-card.143a09e34e7d110af659.png",
+    "static/media/girl.png": "/coffee-app/static/media/girl.2f0f5f72a1642167ec56.png",
+    "static/media/cup.png": "/coffee-app/static/media/cup.6568d51aa20485987f1d.png",
+    "static/media/aromistico.png": "/coffee-app/static/media/aromistico.abb45c1ba257a5364ef1.png",
+    "static/media/solimo.png": "/coffee-app/static/media/solimo.25d5ad4a54bdd9afbde4.png",
+    "static/media/presto.png": "/coffee-app/static/media/presto.7d9f028b14b6f1708735.png",
+    "static/media/Merienda.woff": "/coffee-app/static/media/Merienda.9cd8f7d94b1c2a0a3243.woff",
+    "static/media/Meriendabold.woff": "/coffee-app/static/media/Meriendabold.8414b99aaef78a8a6311.woff",
+    "static/media/Merienda.woff2": "/coffee-app/static/media/Merienda.9b245cadfba56dc72195.woff2",
+    "static/media/logo.svg": "/coffee-app/static/media/logo.18bbe212ff01932ff73cb4efa084f806.svg",
+    "static/media/Meriendabold.woff2": "/coffee-app/static/media/Meriendabold.8d786727ee35aa9028ee.woff2",
+    "static/media/black-footer-logo.svg": "/coffee-app/static/media/black-footer-logo.b477451cb937903728fd81ebe8f494c4.svg",
+    "static/media/header-logo-white.svg": "/coffee-app/static/media/header-logo-white.d8ad06a77a7f633d0c2a9736d6fb4634.svg",
+    "static/media/about-logo.svg": "/coffee-app/static/media/about-logo.e44c1e47bb39027ed0dd38b54d9c96e1.svg",
+    "static/media/footer-logo.svg": "/coffee-app/static/media/footer-logo.c42ecd3c042146d74138e5d3ccb63680.svg",
+    "index.html": "/coffee-app/index.html",
+    "static/media/line.svg": "/coffee-app/static/media/line.c1e25fcc242182e8da604ec6cf175846.svg",
+    "main.5fda590e.css.map": "/coffee-app/static/css/main.5fda590e.css.map",
+    "main.edf764bf.js.map": "/coffee-app/static/js/main.edf764bf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5fda590e.css",
+    "static/js/main.edf764bf.js"
+  ]
+}
