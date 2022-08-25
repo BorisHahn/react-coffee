@@ -44,7 +44,7 @@ const Layout = () => {
       <div className={className}>
         <div className='nav-list'>
           <img src={logo} alt='logo-img'/>
-          <NavLink className='nav-item' to={process.env.PUBLIC_URL + '/'}>Coffee house</NavLink>
+          <NavLink className='nav-item' to={'/'}>Coffee house</NavLink>
           <NavLink className='nav-item' to='shop'>Our coffee</NavLink>
           <NavLink className='nav-item' to='pleasure'>For your pleasure</NavLink>
         </div>
