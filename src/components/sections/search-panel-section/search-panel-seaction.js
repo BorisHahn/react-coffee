@@ -22,10 +22,10 @@ class SearchPanel extends Component {
       <div className="search">
         <p className="search__text">Lookiing for</p>
         <input className="search__input"
-               type="text" 
-               placeholder="start typing here..."
-               value={this.state.term}
-               onChange={this.onUpdateSearch}></input>
+          type="text"
+          placeholder="start typing here..."
+          value={this.state.term}
+          onChange={this.onUpdateSearch}></input>
       </div>
     )
   }

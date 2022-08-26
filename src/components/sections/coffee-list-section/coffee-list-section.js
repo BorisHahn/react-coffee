@@ -2,15 +2,15 @@ import CoffeeItem from "../coffee-item-section/coffee-item-section"
 import './coffee-list-section.css';
 import { NavLink } from 'react-router-dom'
 
-const CoffeeList = ({data}) => {
+const CoffeeList = ({ data }) => {
   const elements = data.map(item => {
-    const {id, ...itemProps} = item;
-    
-      return (
-        <NavLink className="coffee-link" key={id} to={process.env.PUBLIC_URL + `/shop/${id}`}><CoffeeItem {...itemProps}/></NavLink>
-      )
+    const { id, ...itemProps } = item;
+
+    return (
+      <NavLink className="coffee-link" key={id} to={process.env.PUBLIC_URL + `/shop/${id}`}><CoffeeItem {...itemProps} /></NavLink>
+    )
   })
-  const emptyMessage = 
+  const emptyMessage =
     <div className="empty-plag">
       <p className="empty-plag__text">Nothing found for your request...</p>
     </div>

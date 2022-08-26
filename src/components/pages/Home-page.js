@@ -3,9 +3,9 @@ import CoffeeItem from '../sections/coffee-item-section/coffee-item-section';
 import './Home-page.css';
 
 
-function Home({dataBest}) {
+function Home({ dataBest }) {
   const array = dataBest.map(item => {
-    const {id, ...itemProps} = item;
+    const { id, ...itemProps } = item;
     return (
       <>
         <CoffeeItem key={id} {...itemProps} />

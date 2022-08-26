@@ -1,7 +1,7 @@
 import './coffee-item-section.css';
 
 const CoffeeItem = (props) => {
-    const {name, country, price, weight, img} = props;
+  const { name, country, price, weight, img } = props;
   return (
     <li className="item">
       <img className="item__image" src={img} alt="coffee img"></img>

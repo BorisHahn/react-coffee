@@ -3,7 +3,7 @@ import aboutLogo from '../../../img/about-logo.svg';
 
 
 
-const AboutSection = ({info}) => {
+const AboutSection = ({ info }) => {
   return (
     <div className="about">
       <img className="about__image" src={info.img} alt="girl"></img>

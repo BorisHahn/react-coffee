@@ -7,22 +7,22 @@ import './Shop.css';
 import line from '../../img/line.svg';
 
 
-const Shop = ({data, filter, onFilterSelect, onUpdateSearch, info}) => {
+const Shop = ({ data, filter, onFilterSelect, onUpdateSearch, info }) => {
   return (
     <>
-    <div className="wrapper">
-      <AboutSection info={info}/>
-      <div className="line">
-        <img src={line} alt="split line"></img>
+      <div className="wrapper">
+        <AboutSection info={info} />
+        <div className="line">
+          <img src={line} alt="split line"></img>
+        </div>
+        <div className="search-and-filter">
+          <SearchPanel onUpdateSearch={onUpdateSearch} />
+          <FilterPanel filter={filter} onFilterSelect={onFilterSelect} />
+        </div>
+        <CoffeeList data={data} />
       </div>
-      <div className="search-and-filter">
-        <SearchPanel onUpdateSearch={onUpdateSearch}/>
-        <FilterPanel filter={filter} onFilterSelect={onFilterSelect}/>
-      </div>
-      <CoffeeList data={data}/>
-    </div>
     </>
-    
+
   )
 }
 
