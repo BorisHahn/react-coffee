@@ -1,33 +1,35 @@
 import { Component } from "react";
-import './search-panel-section.css';
+import "./search-panel-section.css";
 
 class SearchPanel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      term: ''
-    }
+      term: "",
+    };
   }
 
   onUpdateSearch = (e) => {
     const term = e.target.value;
     this.setState({
-      term: term
+      term: term,
     });
     this.props.onUpdateSearch(term);
-  }
+  };
 
   render() {
     return (
       <div className="search">
         <p className="search__text">Lookiing for</p>
-        <input className="search__input"
-               type="text" 
-               placeholder="start typing here..."
-               value={this.state.term}
-               onChange={this.onUpdateSearch}></input>
+        <input
+          className="search__input"
+          type="text"
+          placeholder="start typing here..."
+          value={this.state.term}
+          onChange={this.onUpdateSearch}
+        ></input>
       </div>
-    )
+    );
   }
 }
 
