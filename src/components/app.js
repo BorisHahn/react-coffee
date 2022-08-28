@@ -170,7 +170,7 @@ class App extends Component {
     return (
       <div className="app">
         <Routes>
-          <Route path={"#/"} element={<Layout />}>
+          <Route path={"/"} element={<Layout />}>
             <Route index element={<Home dataBest={dataBest} />} />
             <Route
               path="shop"

@@ -43,7 +43,7 @@ const Layout = () => {
         <div className={className}>
           <div className="nav-list">
             <img src={logo} alt="logo-img" />
-            <NavLink className="nav-item" to={"#/"}>
+            <NavLink className="nav-item" to={"/"}>
               Coffee house
             </NavLink>
             <NavLink className="nav-item" to="shop">
