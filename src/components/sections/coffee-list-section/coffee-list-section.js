@@ -10,7 +10,7 @@ const CoffeeList = ({ data }) => {
       <NavLink
         className="coffee-link"
         key={id}
-        to={process.env.PUBLIC_URL + `/shop/${id}`}
+        to={`/shop/${id}`}
       >
         <CoffeeItem {...itemProps} />
       </NavLink>

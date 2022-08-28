@@ -11,17 +11,19 @@ const Layout = () => {
   let titleText = "";
 
   if (
-    matchPath(process.env.PUBLIC_URL + "/shop/:id", location.pathname) ||
-    matchPath(process.env.PUBLIC_URL + "/shop", location.pathname)
+    matchPath("/shop/:id", location.pathname) ||
+    matchPath("/shop", location.pathname)
   ) {
     className += "header__background_shop";
     titleText += "Our coffee";
   } else if (
-    matchPath(process.env.PUBLIC_URL + "/pleasure", location.pathname)
+    matchPath("/pleasure", location.pathname)
   ) {
     className += "header__background_pleasure";
     titleText += "For your pleasure";
-  } else if (matchPath(process.env.PUBLIC_URL + "/", location.pathname)) {
+  } else if (
+    matchPath("/", location.pathname)
+  ) {
     className += "header__background_main";
     titleText += "Everything You Love About Coffee";
   }
@@ -52,7 +54,7 @@ const Layout = () => {
             </NavLink>
           </div>
           <h1 className="header__title">{titleText}</h1>
-          {matchPath(process.env.PUBLIC_URL + "/", location.pathname) &&
+            {matchPath("/", location.pathname) &&
             headerMainText}
         </div>
 
