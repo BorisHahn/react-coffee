@@ -7,7 +7,7 @@ const About = ({ data }) => {
   const card = data.find((item) => item.id === parseInt(id));
   return (
     <div className="info">
-      <NavLink to={"shop"}>
+      <NavLink to={"/shop"}>
         <button type="button" className="button info__button">
           Return to shop
         </button>
